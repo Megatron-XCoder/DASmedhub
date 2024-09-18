@@ -1,4 +1,4 @@
-import Home from "./Components/Home/Home.jsx";
+import Home from "./Components/Pages/Home.jsx";
 
 
 function App() {

@@ -1,10 +1,11 @@
 
 import {Button} from "@material-tailwind/react";
 import React from "react";
-import Form from "./BelowHomeForm.jsx";
-import BelowHomeForm from "./BelowHomeForm.jsx";
-import StickyNavbar from "./Navbar.jsx";
-import Services from "./ServiceCards.jsx";
+import Form from "../Home/BelowHomeForm.jsx";
+import BelowHomeForm from "../Home/BelowHomeForm.jsx";
+import StickyNavbar from "../Home/Navbar.jsx";
+import Services from "../Home/ServiceCards.jsx";
+import DASMedhubStory from "../Home/DASMedhubStory.jsx";
 
 
 function Home() {
@@ -62,6 +63,7 @@ function Home() {
                 </p>
             </div>
             <Services/>
+            <DASMedhubStory/>
         </>
     )
 }
