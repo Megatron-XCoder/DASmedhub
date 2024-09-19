@@ -33,7 +33,7 @@ const SpecialistsSection = () => {
                 {/* Cards grid */}
                 <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 55.png"
+                        image="/specialist/Ellipse 55.png"
                         name="Hyun Kyu Song, DDS"
                         rating="4.54"
                         reviews="37"
@@ -42,7 +42,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 56.png"
+                        image="/specialist/Ellipse 56.png"
                         name="Dr. Garo Nazarian, DDS"
                         rating="4.92"
                         reviews="212"
@@ -51,7 +51,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 57.png"
+                        image="/specialist/Ellipse 57.png"
                         name="Mazen Natour, DMD"
                         rating="4.82"
                         reviews="250"
@@ -62,7 +62,7 @@ const SpecialistsSection = () => {
 
                     {/* Repeat Cards as necessary */}
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 55.png"
+                        image="/specialist/Ellipse 55.png"
                         name="Hyun Kyu Song, DDS"
                         rating="4.54"
                         reviews="37"
@@ -71,7 +71,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 56.png"
+                        image="/specialist/Ellipse 56.png"
                         name="Dr. Garo Nazarian, DDS"
                         rating="4.92"
                         reviews="212"
@@ -80,7 +80,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="src/assets/specialist/Ellipse 57.png"
+                        image="/specialist/Ellipse 57.png"
                         name="Mazen Natour, DMD"
                         rating="4.82"
                         reviews="250"

@@ -34,12 +34,12 @@ const Testimonials = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 px-6">
                 <TestimonialCard
-                    image="src/assets/testimonials/Rectangle 8.png"
+                    image="/testimonials/Rectangle 8.png"
                     text="After my knee surgery, the convenience of online consultations made my recovery smoother than I could have imagined."
                     name="Linda A."
                 />
                 <TestimonialCard
-                    image="src/assets/testimonials/Rectangle 8-1.png"
+                    image="/testimonials/Rectangle 8-1.png"
                     text="Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life."
                     name="Henry B."
                 />
@@ -54,12 +54,12 @@ const Testimonials = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6">
                 <TestimonialCard
-                    image="src/assets/testimonials/Rectangle 8-2.png"
+                    image="/testimonials/Rectangle 8-2.png"
                     text="The prescription refill system is a game-changer for managing my diabetes. It's really efficient and completely hassle-free."
                     name="Joshua T."
                 />
                 <TestimonialCard
-                    image="src/assets/testimonials/Rectangle 8-3.png"
+                    image="/testimonials/Rectangle 8-3.png"
                     text="Finding a doctor who really understands all of my health needs has never been easier. This platform has changed my life."
                     name="Samantha K."
                 />
