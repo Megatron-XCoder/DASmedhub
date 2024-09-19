@@ -1,12 +1,20 @@
-import { Button } from "@material-tailwind/react";
+import {Button, Typography} from "@material-tailwind/react";
 import React from "react";
 
 function DASMedhubStory() {
     return (
-        <div className="mt-6 flex justify-center items-center">
-            <div className="p-16 bg-white rounded-xl shadow-lg w-full sm:w-[95%] lg:w-[75rem] mx-4 sm:mx-auto border-2 border-green-700">
+        <div className="mt-10 flex justify-center items-center">
+            <div className="p-16 bg-gradient-to-b from-white via-white to-teal-50 rounded-3xl shadow-lg w-full sm:w-[95%] lg:w-[75rem] mx-4 sm:mx-auto border-2 border-green-700">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center text-gray-800">
-                    DAS<span className="text-green-500">medhub</span>’s Story: Get to know us
+                    <Typography
+                        as="a"
+                        href="#"
+                        className="lg:ml-14 cursor-pointer py-1.5 text-3xl font-bold"
+                    >
+                        <span className="text-teal-600">DAS</span>
+                        <span className="text-orange-500">medhub</span>
+                        <span>’s Story: Get to know us</span>
+                    </Typography>
                 </h2>
 
                 <div className="flex flex-col items-center md:flex-row mt-6">
