@@ -88,8 +88,7 @@ function StickyNavbar() {
                             <Button
                                 variant="gradient"
                                 size="md"
-                                color={"teal"}
-                                className="mr-14 hidden text-md lg:inline-block"
+                                className="bg-gradient-to-r from-teal-500 to-green-600 mr-14 hidden text-md lg:inline-block"
                             >
                                 <span>Book an Appointment</span>
                             </Button>
@@ -136,7 +135,7 @@ function StickyNavbar() {
                 <MobileNav open={openNav}>
                     {navList}
                     <div className="flex items-center gap-x-1">
-                        <Button fullWidth variant="gradient" size="sm" color={"teal"} className="">
+                        <Button fullWidth variant="gradient" size="sm" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
                             <span>BOOK AN APPOINTMENT</span>
                         </Button>
                     </div>

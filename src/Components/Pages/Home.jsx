@@ -1,12 +1,15 @@
 
 import {Button} from "@material-tailwind/react";
 import React from "react";
-import Form from "../Home/BelowHomeForm.jsx";
 import BelowHomeForm from "../Home/BelowHomeForm.jsx";
 import StickyNavbar from "../Home/Navbar.jsx";
 import Services from "../Home/ServiceCards.jsx";
 import DASMedhubStory from "../Home/DASMedhubStory.jsx";
 import PlatformInfoHome from "../Home/PlatformInfoHome.jsx";
+import Testimonials from "../Home/Testimonials.jsx";
+import SpecialistsSection from "../Home/Specialist'sSection.jsx";
+import HelpDeskForm from "../Home/HelpDeskForm.jsx";
+import Footer from "../Home/Footer.jsx";
 
 
 function Home() {
@@ -24,10 +27,10 @@ function Home() {
                         manage prescriptions, and schedule appointments with ease. Ready to take control of your health? Get Started or Book an Appointment today.
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4">
-                        <Button variant="gradient" size="lg" color="teal">
+                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
                             Patient's Login
                         </Button>
-                        <Button variant="gradient" size="lg" color="teal">
+                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
                             Health Specialist's Login
                         </Button>
                     </div>
@@ -65,16 +68,11 @@ function Home() {
             </div>
             <Services/>
             <DASMedhubStory/>
-            <div className="mt-8 sm:mt-12 md:mt-16 text-center">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                    Top <span className="bg-gradient-to-r from-teal-400 via-green-500 to-green-700 inline-block text-transparent bg-clip-text">Services</span> we offer
-                </h1>
-                <p className="text-gray-500 leading-relaxed mt-4 sm:mt-6 px-4 sm:px-12 md:px-24 lg:px-52">
-                    In today’s fast-paced world, your health deserves the utmost attention and convenience. That’s why
-                    DASmedhub offers a suite of integrated services designed to cater to your healthcare needs digitally:
-                </p>
-            </div>
             <PlatformInfoHome/>
+            <Testimonials/>
+            <SpecialistsSection/>
+            <HelpDeskForm/>
+            <Footer/>
         </>
     )
 }

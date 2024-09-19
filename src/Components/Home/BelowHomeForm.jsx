@@ -24,7 +24,7 @@ function BelowHomeForm() {
                         <input
                             type="email"
                             placeholder="Enter Your Email Address"
-                            className="border border-gray-300 rounded-lg p-3 outline-none w-full text-gray-600 bg-white"
+                            className="border-2 border-gray-300 rounded-lg p-3 outline-none focus:border-teal-500 w-full text-gray-600 bg-white"
                         />
                     </div>
 
@@ -37,7 +37,7 @@ function BelowHomeForm() {
                         <input
                             type="text"
                             placeholder="Enter Your Contact Number"
-                            className="border border-gray-300 rounded-lg p-3 outline-none w-full text-gray-600 bg-white"
+                            className="border-2 border-gray-300 rounded-lg p-3 outline-none focus:border-teal-500 w-full text-gray-600 bg-white"
                         />
                     </div>
 
@@ -50,15 +50,16 @@ function BelowHomeForm() {
                         <input
                             type="text"
                             placeholder="Select Date of Appointment"
-                            className="border border-gray-300 rounded-lg p-3 outline-none w-full text-gray-600 bg-white"
+                            className="border-2 border-gray-300 rounded-lg p-3 outline-none focus:border-teal-500 w-full text-gray-600 bg-white"
                         />
                     </div>
 
                     {/* Submit Button */}
                     <div className="col-span-1 flex justify-center">
-                        <Button variant="gradient" size="lg" color="teal">
+                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
                             Chat With AI
                         </Button>
+
                     </div>
                 </form>
             </div>
