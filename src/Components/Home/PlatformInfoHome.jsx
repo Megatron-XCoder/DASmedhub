@@ -47,7 +47,7 @@ const PlatformInfoHome = () => {
 
                     {/* Right Section - Enlarged Image */}
                     <div className="relative lg:col-span-3">
-                        <img src="src/assets/HomePlatform-doctor.png" alt="Doctor" className="w-full h-auto object-cover rounded-lg scale-110" />
+                        <img src="../../../public/HomePlatform-doctor.png" alt="Doctor" className="w-full h-auto object-cover rounded-lg scale-110" />
                     </div>
                 </div>
             </section>

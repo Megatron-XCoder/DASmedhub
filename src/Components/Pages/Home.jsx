@@ -38,12 +38,12 @@ function Home() {
                         Trusted by millions across the globe:
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4 mt-4">
-                        <img src="src/assets/icons/ri_amazon-fill.png" alt="Amazon" className="h-8"/>
-                        <img src="src/assets/icons/ic_baseline-apple.png" alt="Apple" className="h-8"/>
-                        <img src="src/assets/icons/uim_google.png" alt="Google" className="h-8"/>
-                        <img src="src/assets/icons/cib_notion.png" alt="Notion" className="h-8"/>
-                        <img src="src/assets/icons/mdi_spotify.png" alt="Spotify" className="h-8"/>
-                        <img src="src/assets/icons/mdi_slack.png" alt="Slack" className="h-8"/>
+                        <img src="../../../public/icons/ri_amazon-fill.png" alt="Amazon" className="h-8"/>
+                        <img src="../../../public/icons/ic_baseline-apple.png" alt="Apple" className="h-8"/>
+                        <img src="../../../public/icons/uim_google.png" alt="Google" className="h-8"/>
+                        <img src="../../../public/icons/cib_notion.png" alt="Notion" className="h-8"/>
+                        <img src="../../../public/icons/mdi_spotify.png" alt="Spotify" className="h-8"/>
+                        <img src="../../../public/icons/mdi_slack.png" alt="Slack" className="h-8"/>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ function Home() {
                     <img
                         alt="doctor"
                         className="h-64 sm:h-72 md:h-[32rem] object-cover"
-                        src="src/assets/home-doctor.png"
+                        src="../../../public/home-doctor.png"
                     />
                 </div>
             </div>

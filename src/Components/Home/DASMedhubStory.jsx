@@ -23,7 +23,7 @@ function DASMedhubStory() {
                         <img
                             alt="doctor"
                             className="h-auto w-full object-cover rounded-2xl"
-                            src="src/assets/MedhubStory-Doctor.png" // Replace with your image path
+                            src="../../../public/MedhubStory-Doctor.png" // Replace with your image path
                         />
                     </div>
 
