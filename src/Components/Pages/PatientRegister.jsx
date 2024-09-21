@@ -40,7 +40,7 @@ function PatientRegisterPage() {
     };
 
     return (
-        <div className="relative h-screen w-full flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('public/patientloginbackground.png')" }}>
+        <div className="relative h-screen w-full flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('/patientloginbackground.png')" }}>
             {error && <ErrorPopup message={error} />}
             {success && <SuccessPopup message={success} />}
 
