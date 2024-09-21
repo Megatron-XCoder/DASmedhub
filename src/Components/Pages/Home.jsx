@@ -1,15 +1,16 @@
 
 import {Button} from "@material-tailwind/react";
 import React from "react";
+import {Link} from "react-router-dom";
 import BelowHomeForm from "../Home/BelowHomeForm.jsx";
-import StickyNavbar from "../Home/Navbar.jsx";
+import StickyNavbar from "../Navbar.jsx";
 import Services from "../Home/ServiceCards.jsx";
 import DASMedhubStory from "../Home/DASMedhubStory.jsx";
 import PlatformInfoHome from "../Home/PlatformInfoHome.jsx";
 import Testimonials from "../Home/Testimonials.jsx";
 import SpecialistsSection from "../Home/Specialist'sSection.jsx";
 import HelpDeskForm from "../Home/HelpDeskForm.jsx";
-import Footer from "../Home/Footer.jsx";
+import Footer from "../Footer.jsx";
 
 
 function Home() {
@@ -27,11 +28,16 @@ function Home() {
                         manage prescriptions, and schedule appointments with ease. Ready to take control of your health? Get Started or Book an Appointment today.
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4">
-                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
-                            Patient's Login
+                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500" +
+                            " to-green-600"}>
+                            <Link to={"/patient-register"}>
+                                Patient's Login
+                            </Link>
                         </Button>
                         <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
-                            Health Specialist's Login
+                            <Link to={"/Specialist-register"}>
+                                Health Specialist's Login
+                            </Link>
                         </Button>
                     </div>
                     <p className="text-gray-500 leading-relaxed">
