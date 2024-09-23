@@ -2,11 +2,11 @@ import React from "react";
 import {
     Navbar,
     MobileNav,
-    Typography,
     Button,
     IconButton,
     Card,
 } from "@material-tailwind/react";
+import {Link, NavLink} from "react-router-dom";
 
 function StickyNavbar() {
     const [openNav, setOpenNav] = React.useState(false);
@@ -20,66 +20,50 @@ function StickyNavbar() {
 
     const navList = (
         <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography
-                as="li"
-                variant="small"
+            <NavLink
+                to={"/"}
+                className={"p-1 text-xl font-medium text-gray-600"}
+            >
+                <p>Home</p>
+            </NavLink>
+            <NavLink
+                to={"/Patient-register"}
                 className="p-1 text-xl font-medium text-gray-600"
             >
-                <a href="#" className="flex items-center">
-                    Home
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
+                <p>Patients</p>
+            </NavLink>
+            <NavLink
+                to={"/Specialist-register"}
                 className="p-1 text-xl font-medium text-gray-600"
             >
-                <a href="#" className="flex items-center">
-                    Patient
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
+                <p>Health Specialist</p>
+            </NavLink>
+            <NavLink
+                to={"/About-us"}
                 className="p-1 text-xl font-medium text-gray-600"
             >
-                <a href="#" className="flex items-center">
-                    Health Specialist
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
+                <p>About us</p>
+            </NavLink>
+            <NavLink
+                to={"/Blog"}
                 className="p-1 text-xl font-medium text-gray-600"
             >
-                <a href="#" className="flex items-center">
-                    About us
-                </a>
-            </Typography>
-            <Typography
-                as="li"
-                variant="small"
-                className="p-1 text-xl font-medium text-gray-600"
-            >
-                <a href="#" className="flex items-center">
-                    Blog
-                </a>
-            </Typography>
+                <p>Blog</p>
+            </NavLink>
         </ul>
     );
 
     return (
-        <div className="max-h-[768px] w-full overflow-auto">
+        <div className="max-h-[768px] w-full z-50 top-0 fixed">
             <Navbar className="sticky top-0 z-10 w-full max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
                 <div className="flex items-center justify-between text-blue-gray-900">
-                    <Typography
-                        as="a"
-                        href="#"
+                    <NavLink
+                        to={"/"}
                         className="lg:ml-14 cursor-pointer py-1.5 text-3xl font-bold"
                     >
                         <span className="text-teal-600">DAS</span>
                         <span className="text-orange-500">medhub</span>
-                    </Typography>
+                    </NavLink>
 
                     <div className="hidden lg:block">{navList}</div>
                     <div className="flex items-center gap-4">
@@ -90,7 +74,7 @@ function StickyNavbar() {
                                 size="md"
                                 className="bg-gradient-to-r from-teal-500 to-green-600 mr-14 hidden text-md lg:inline-block"
                             >
-                                <span>Book an Appointment</span>
+                                <span>Pulse Point</span>
                             </Button>
                         </div>
                         <IconButton
@@ -136,7 +120,7 @@ function StickyNavbar() {
                     {navList}
                     <div className="flex items-center gap-x-1">
                         <Button fullWidth variant="gradient" size="sm" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
-                            <span>BOOK AN APPOINTMENT</span>
+                            <span>PULSE POINT</span>
                         </Button>
                     </div>
                 </MobileNav>

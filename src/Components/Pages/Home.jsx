@@ -1,9 +1,8 @@
-
 import {Button} from "@material-tailwind/react";
 import React from "react";
 import {Link} from "react-router-dom";
 import BelowHomeForm from "../Home/BelowHomeForm.jsx";
-import StickyNavbar from "../Navbar.jsx";
+import Navbar from "../Navbar.jsx";
 import Services from "../Home/ServiceCards.jsx";
 import DASMedhubStory from "../Home/DASMedhubStory.jsx";
 import PlatformInfoHome from "../Home/PlatformInfoHome.jsx";
@@ -16,12 +15,12 @@ import Footer from "../Footer.jsx";
 function Home() {
     return (
         <>
-            <StickyNavbar></StickyNavbar>
-            <div className="max-w-screen-xl mx-auto py-12 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0">
+            <Navbar></Navbar>
+            <div className="max-w-screen-xl mx-auto py-12 mt-10 px-4 md:px-8 flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0">
                 {/* Left Section - Text & Buttons */}
                 <div className="flex flex-col max-w-lg space-y-8 text-center md:text-left">
                     <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-                        Your <span className="bg-gradient-to-r from-teal-400 via-green-500 to-green-700 inline-block text-transparent bg-clip-text">trusted partner</span> in digital healthcare.
+                        <span className="bg-gradient-to-r from-teal-400 via-green-500 to-green-700 text-4xl inline-block text-transparent bg-clip-text">Connecting Patients,</span> Accelerating Healing.
                     </h1>
                     <p className="text-gray-500 leading-relaxed">
                         Empowering Your Health at Every Step. Experience personalized medical care from the comfort of your home. Connect with <span className="text-green-600">certified doctors</span>,
@@ -30,7 +29,7 @@ function Home() {
                     <div className="flex justify-center md:justify-start space-x-4">
                         <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500" +
                             " to-green-600"}>
-                            <Link to={"/patient-register"}>
+                            <Link to={"/Patient-register"}>
                                 Patient's Login
                             </Link>
                         </Button>

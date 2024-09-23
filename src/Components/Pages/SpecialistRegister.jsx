@@ -5,6 +5,7 @@ import { Button } from "@material-tailwind/react";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import ErrorPopup from "../ErrorPopup.jsx";
 import SuccessPopup from "../SuccessPopup.jsx";
+import Navbar from "../Navbar.jsx";
 
 function SpecialistRegisterPage() {
     const [formData, setFormData] = useState({
@@ -40,12 +41,16 @@ function SpecialistRegisterPage() {
     };
 
     return (
-        <div className="relative h-screen w-full flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('/SpecialistReg-Background.jpg')" }}>
+
+        <>
+        <Navbar/>
+
+        <div className="relative mt-12 sm:mt-16 md:mt-18 h-screen w-full flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('/SpecialistReg-Background.jpg')" }}>
             {error && <ErrorPopup message={error} />}
             {success && <SuccessPopup message={success} />}
 
             {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+            <div className="absolute inset-0 bg-teal-400 bg-opacity-50 backdrop-blur-sm"></div>
 
             <div className="relative z-10 rounded-3xl border-2 border-white backdrop-blur-xl w-full max-w-lg mx-auto p-6 sm:p-10 lg:p-12">
                 <section className="font-['raleway']">
@@ -127,37 +132,13 @@ function SpecialistRegisterPage() {
                                     Create Account <FaCircleArrowRight className="ml-2" size={16} />
                                 </Button>
                             </form>
-
-                            <div className="mt-5">
-                                <p className="text-center text-sm sm:text-base text-white">
-                                    ---------- Or Try With ----------
-                                </p>
-                                <button
-                                    type="button"
-                                    className="relative mt-4 w-full inline-flex items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-gray-700 transition-all duration-200 hover:bg-gray-100 hover:text-black"
-                                >
-                                    <span className="mr-2">
-                                        <svg
-                                            className="h-6 w-6 text-rose-500"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                        >
-                                            <path
-                                                d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z"
-                                            />
-                                        </svg>
-                                    </span>
-                                    <Link to="/Signup">
-                                        Sign up with Google
-                                    </Link>
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
+
+        </>
     );
 }
 

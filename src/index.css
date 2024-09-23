@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+.active p{
+    @apply text-teal-500
+}
+
 /*:root {*/
 /*  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
 /*  line-height: 1.5;*/

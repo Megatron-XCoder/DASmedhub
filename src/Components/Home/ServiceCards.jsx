@@ -65,19 +65,19 @@ const Services = () => {
             <div className="grid grid-cols-1 sm:grid-cols-3 sm:w-[95%] lg:w-[65rem] mx-4 sm:mx-auto gap-4">
                 <ServiceCard
                     icon={<HiDocumentPlus className="w-7 h-7 text-green-500 dark:text-green-400" />}
-                    title="Prescriptions"
+                    title="Symptoms Assessment"
                     description="Receive and renew prescriptions digitally after your consultation with our specialists."
                     link="/prescriptions"
                 />
                 <ServiceCard
                     icon={<BsFillFileEarmarkMedicalFill className="w-7 h-7 text-green-500 dark:text-green-400" />}
-                    title="Medical Notes"
+                    title="First-Aid Assistance"
                     description="Obtain necessary medical notes for work or school with only a few clicks of hassle."
                     link="/medical-notes"
                 />
                 <ServiceCard
                     icon={<FaPumpMedical className="w-7 h-7 text-green-500 dark:text-green-400" />}
-                    title="Medicine Refills"
+                    title="Online Pharmacies"
                     description="Skip the pharmacy queues and save time + energy by ordering medicine refills online."
                     link="/medicine-refills"
                 />

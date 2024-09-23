@@ -33,6 +33,9 @@ function Footer() {
                                 <FaYoutube size={20} />
                             </a>
                         </div>
+                        <p className="text-gray-500">
+                            <a>support@dasmedhub.com</a>
+                        </p>
                     </div>
 
                     {/* Support Section */}
@@ -53,9 +56,9 @@ function Footer() {
                         <ul className="space-y-2">
                             <li><a href="#" className="hover:underline">Booking appointments</a></li>
                             <li><a href="#" className="hover:underline">Online consultations</a></li>
-                            <li><a href="#" className="hover:underline">Prescriptions</a></li>
-                            <li><a href="#" className="hover:underline">Medicine Refills</a></li>
-                            <li><a href="#" className="hover:underline">Medical Notes</a></li>
+                            <li><a href="#" className="hover:underline">Symptoms Assessments</a></li>
+                            <li><a href="#" className="hover:underline">First-aid Assistance</a></li>
+                            <li><a href="#" className="hover:underline">Online Pharmacies</a></li>
                         </ul>
                     </div>
 

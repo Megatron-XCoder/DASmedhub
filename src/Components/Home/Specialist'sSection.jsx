@@ -62,7 +62,7 @@ const SpecialistsSection = () => {
 
                     {/* Repeat Cards as necessary */}
                     <SpecialistCard
-                        image="/specialist/Ellipse 55.png"
+                        image="/specialist/Black person1.jpg"
                         name="Hyun Kyu Song, DDS"
                         rating="4.54"
                         reviews="37"
@@ -71,7 +71,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="/specialist/Ellipse 56.png"
+                        image="/specialist/Black person2.jpg"
                         name="Dr. Garo Nazarian, DDS"
                         rating="4.92"
                         reviews="212"
@@ -80,7 +80,7 @@ const SpecialistsSection = () => {
                         status="Highly recommended"
                     />
                     <SpecialistCard
-                        image="/specialist/Ellipse 57.png"
+                        image="/specialist/Black person3.jpg"
                         name="Mazen Natour, DMD"
                         rating="4.82"
                         reviews="250"
