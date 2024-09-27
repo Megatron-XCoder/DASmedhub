@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
+import {Button, Typography} from "@material-tailwind/react";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import ErrorPopup from "../ErrorPopup.jsx";
 import SuccessPopup from "../SuccessPopup.jsx";
@@ -29,7 +29,7 @@ function PatientRegisterPage() {
         setSuccess(null);
 
         try {
-            // await axios.post('https://vsgoi-website.onrender.com/signup', formData);
+            await axios.post('https://localhost:5000/signup', formData);
             setSuccess('User created successfully');
         } catch (error) {
             if (error.response && error.response.data && error.response.data.message) {
@@ -44,13 +44,10 @@ function PatientRegisterPage() {
         <>
         <Navbar/>
 
-        <div className="relative mt-12 sm:mt-16 md:mt-18 h-screen w-full flex items-center justify-center bg-cover bg-center px-4 sm:px-6 lg:px-8" style={{ backgroundImage: "url('/patientloginbackground.png')" }}>
+        <div className="relative mt-20 sm:mt-16 md:mt-18 h-screen w-full flex items-center justify-center bg-gradient-to-l from-teal-200 to-green-300 px-4 sm:px-6 lg:px-8">
 
             {error && <ErrorPopup message={error} />}
             {success && <SuccessPopup message={success} />}
-
-            {/* Semi-transparent overlay */}
-            <div className="absolute inset-0 bg-teal-400 bg-opacity-50 backdrop-blur-sm"></div>
 
             <div className="relative z-10 rounded-3xl border-2 border-white backdrop-blur-xl w-full max-w-lg mx-auto p-6 sm:p-10 lg:p-12">
                 <section className="font-['raleway']">
@@ -60,10 +57,10 @@ function PatientRegisterPage() {
                     </h1>
                     <div className="flex items-center justify-center py-4 sm:py-6 lg:py-6">
                         <div className="w-full max-w-sm xl:max-w-md">
-                            <h2 className="mt-4 text-2xl sm:text-3xl font-bold leading-tight text-teal-400 text-center">Sign up</h2>
+                            <h2 className="mt-4 text-2xl sm:text-3xl font-bold leading-tight text-teal-400 text-center">Patient's Registration</h2>
                             <p className="mt-3 text-sm sm:text-base text-white text-center">
                                 Already have an account?{' '}
-                                <Link to="/Signin" title="" className="font-bold text-teal-400 transition-all duration-200 hover:underline">
+                                <Link to="/Patient-login" title="" className="font-bold text-teal-400 transition-all duration-200 hover:underline">
                                     Sign In
                                 </Link>
                             </p>
@@ -122,6 +119,27 @@ function PatientRegisterPage() {
                                                 onChange={handleChange}
                                             />
                                         </div>
+                                    </div>
+                                    <div>
+                                        <Typography
+                                            variant="small"
+                                            color="gray"
+                                            className="mt-2 flex gap-1 text-white text-md font-normal"
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 24 24"
+                                                fill="currentColor"
+                                                className="-mt-px h-6 w-6 flex items-center justify-center"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                                                    clipRule="evenodd"
+                                                />
+                                            </svg>
+                                            Use at least 8 characters, one uppercase, one lowercase and one number.
+                                        </Typography>
                                     </div>
                                 </div>
 

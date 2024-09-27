@@ -1,15 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     Navbar,
     MobileNav,
     Button,
     IconButton,
-    Card,
 } from "@material-tailwind/react";
-import {Link, NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 function StickyNavbar() {
-    const [openNav, setOpenNav] = React.useState(false);
+    const [openNav, setOpenNav] = useState(false);
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [token, setToken] = useState(true);  // Token to check if the user is logged in
+
+    const navigate = useNavigate();
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
 
     React.useEffect(() => {
         const handleResize = () => window.innerWidth >= 960 && setOpenNav(false);
@@ -45,7 +52,7 @@ function StickyNavbar() {
                 <p>About us</p>
             </NavLink>
             <NavLink
-                to={"/Blog"}
+                to={"http://localhost:3000/"}
                 className="p-1 text-xl font-medium text-gray-600"
             >
                 <p>Blog</p>
@@ -66,17 +73,78 @@ function StickyNavbar() {
                     </NavLink>
 
                     <div className="hidden lg:block">{navList}</div>
-                    <div className="flex items-center gap-4">
 
+                    <div className="flex items-center gap-4">
                         <div className="flex items-center gap-x-1">
-                            <Button
-                                variant="gradient"
-                                size="md"
-                                className="bg-gradient-to-r from-teal-500 to-green-600 mr-14 hidden text-md lg:inline-block"
-                            >
-                                <span>Pulse Point</span>
-                            </Button>
+                            <div className="relative flex items-center gap-x-4">
+                                {/* Avatar and Button */}
+                                <div
+                                    className={`relative ${token ? 'visible' : 'invisible'}`}
+                                >
+                                    {/* Avatar button */}
+                                    <button
+                                        id="dropdownUserAvatarButton"
+                                        className="flex text-lg bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                                        type="button"
+                                        onClick={toggleDropdown}
+                                    >
+                                        <span className="sr-only">Open user menu</span>
+                                        <img
+                                            className="w-12 h-12 rounded-full"
+                                            src="/specialist/Ellipse 55.png"
+                                            alt="user photo"
+                                        />
+                                    </button>
+
+                                    {/* Dropdown menu */}
+                                    {dropdownOpen && (
+                                        <div
+                                            id="dropdownAvatar"
+                                            className="absolute z-10 right-0 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                                        >
+                                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
+                                                <li>
+                                                    <a
+                                                        href="/User-Profile"
+                                                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                                    >
+                                                        Profile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a
+                                                        href="/Appointments"
+                                                        className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                                    >
+                                                        My Appointments
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <div className="py-2">
+                                                <a
+                                                    onClick={() => setToken(false)}
+                                                    href="#"
+                                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                                                >
+                                                    Log Out
+                                                </a>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {/* Pulse Point Button */}
+                                <Button
+                                    variant="gradient"
+                                    size="md"
+                                    className="bg-gradient-to-r from-teal-500 to-green-600 mr-14 hidden text-md lg:inline-block"
+                                >
+                                    <span>Pulse Point</span>
+                                </Button>
+                            </div>
                         </div>
+
+                        {/* Mobile Icon Button */}
                         <IconButton
                             variant="text"
                             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -116,6 +184,7 @@ function StickyNavbar() {
                         </IconButton>
                     </div>
                 </div>
+
                 <MobileNav open={openNav}>
                     {navList}
                     <div className="flex items-center gap-x-1">

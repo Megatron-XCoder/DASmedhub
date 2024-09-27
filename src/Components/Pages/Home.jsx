@@ -1,6 +1,6 @@
 import {Button} from "@material-tailwind/react";
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import BelowHomeForm from "../Home/BelowHomeForm.jsx";
 import Navbar from "../Navbar.jsx";
 import Services from "../Home/ServiceCards.jsx";
@@ -13,6 +13,8 @@ import Footer from "../Footer.jsx";
 
 
 function Home() {
+    const navigate = useNavigate();
+
     return (
         <>
             <Navbar></Navbar>
@@ -27,13 +29,17 @@ function Home() {
                         manage prescriptions, and schedule appointments with ease. Ready to take control of your health? Get Started or Book an Appointment today.
                     </p>
                     <div className="flex justify-center md:justify-start space-x-4">
-                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500" +
+                        <Button
+                            onClick={()=>navigate('/Patient-register')}
+                            variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500" +
                             " to-green-600"}>
                             <Link to={"/Patient-register"}>
                                 Patient's Login
                             </Link>
                         </Button>
-                        <Button variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
+                        <Button
+                            onClick={()=>navigate('/Specialist-register')}
+                            variant="gradient" size="lg" className={"bg-gradient-to-r from-teal-500 to-green-600"}>
                             <Link to={"/Specialist-register"}>
                                 Health Specialist's Login
                             </Link>
