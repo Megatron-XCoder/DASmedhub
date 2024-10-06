@@ -29,7 +29,7 @@ function PatientRegisterPage() {
         setSuccess(null);
 
         try {
-            await axios.post('https://localhost:5000/signup', formData);
+            await axios.post('http://localhost:5000/patient-registration', formData);
             setSuccess('User created successfully');
         } catch (error) {
             if (error.response && error.response.data && error.response.data.message) {
@@ -44,7 +44,7 @@ function PatientRegisterPage() {
         <>
         <Navbar/>
 
-        <div className="relative mt-20 sm:mt-16 md:mt-18 h-screen w-full flex items-center justify-center bg-gradient-to-l from-teal-200 to-green-300 px-4 sm:px-6 lg:px-8">
+        <div className="relative mt-[4rem] sm:mt-16 md:mt-18 min-h-screen w-full flex items-center justify-center bg-gradient-to-l from-teal-200 to-green-300 px-4 sm:px-6 lg:px-8">
 
             {error && <ErrorPopup message={error} />}
             {success && <SuccessPopup message={success} />}
@@ -71,7 +71,7 @@ function PatientRegisterPage() {
                                             Full Name
                                         </label>
                                         <input
-                                            className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-gray-600 bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
+                                            className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-black bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                                             type="text"
                                             placeholder="Enter Full Name"
                                             id="fullName"
@@ -84,7 +84,7 @@ function PatientRegisterPage() {
                                             Email Address
                                         </label>
                                         <input
-                                            className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-gray-600 bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
+                                            className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-black bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                                             type="email"
                                             placeholder="Enter Email Address"
                                             id="email"
@@ -98,7 +98,7 @@ function PatientRegisterPage() {
                                                 Password
                                             </label>
                                             <input
-                                                className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-gray-600 bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
+                                                className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-black bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                                                 type="password"
                                                 placeholder="Enter Password"
                                                 id="password"
@@ -111,7 +111,7 @@ function PatientRegisterPage() {
                                                 Re-Password
                                             </label>
                                             <input
-                                                className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-gray-600 bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
+                                                className="h-10 w-full rounded-md border shadow-lg p-3 focus:border-teal-500 text-black bg-transparent placeholder:text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                                                 type="password"
                                                 placeholder="Re-Enter Password"
                                                 id="rePassword"

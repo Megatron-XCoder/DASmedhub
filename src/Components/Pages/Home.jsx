@@ -7,9 +7,9 @@ import Services from "../Home/ServiceCards.jsx";
 import DASMedhubStory from "../Home/DASMedhubStory.jsx";
 import PlatformInfoHome from "../Home/PlatformInfoHome.jsx";
 import Testimonials from "../Home/Testimonials.jsx";
-import SpecialistsSection from "../Home/Specialist'sSection.jsx";
 import HelpDeskForm from "../Home/HelpDeskForm.jsx";
 import Footer from "../Footer.jsx";
+import TopDoctors from "../Home/TopDoctors.jsx";
 
 
 function Home() {
@@ -81,7 +81,7 @@ function Home() {
             <DASMedhubStory/>
             <PlatformInfoHome/>
             <Testimonials/>
-            <SpecialistsSection/>
+            <TopDoctors/>
             <HelpDeskForm/>
             <Footer/>
         </>

@@ -10,7 +10,7 @@ import {NavLink, useNavigate} from "react-router-dom";
 function StickyNavbar() {
     const [openNav, setOpenNav] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [token, setToken] = useState(true);  // Token to check if the user is logged in
+    const [token, setToken] = useState(false);  // Token to check if the user is logged in
 
     const navigate = useNavigate();
 
@@ -105,7 +105,7 @@ function StickyNavbar() {
                                             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                                                 <li>
                                                     <a
-                                                        href="/User-Profile"
+                                                        href="/Patient-Profile"
                                                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                                     >
                                                         Profile
@@ -113,7 +113,7 @@ function StickyNavbar() {
                                                 </li>
                                                 <li>
                                                     <a
-                                                        href="/Appointments"
+                                                        href="/UserAppointments.jsx"
                                                         className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                                     >
                                                         My Appointments

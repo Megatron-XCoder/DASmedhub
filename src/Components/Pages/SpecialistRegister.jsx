@@ -29,7 +29,7 @@ function SpecialistRegisterPage() {
         setSuccess(null);
 
         try {
-            await axios.post('https://localhost:5000/signup', formData);
+            await axios.post('http://localhost:5000/specialist-registration', formData);
             setSuccess('User created successfully');
         } catch (error) {
             if (error.response && error.response.data && error.response.data.message) {
@@ -45,7 +45,7 @@ function SpecialistRegisterPage() {
         <>
         <Navbar/>
 
-        <div className="relative mt-20 sm:mt-16 md:mt-18 h-screen w-full flex items-center justify-center bg-gradient-to-l from-teal-200 to-green-300 px-4 sm:px-6 lg:px-8">
+        <div className="relative mt-[4rem] sm:mt-16 md:mt-18 min-h-screen w-full flex items-center justify-center bg-gradient-to-l from-teal-200 to-green-300 px-4 sm:px-6 lg:px-8">
             {error && <ErrorPopup message={error} />}
             {success && <SuccessPopup message={success} />}
 
